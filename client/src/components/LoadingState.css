@@ -1,0 +1,91 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.loading-animation {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 2rem;
+}
+
+.loading-compass {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  animation: gentlePulse 2s ease-in-out infinite;
+}
+
+.compass-icon {
+  display: block;
+}
+
+@keyframes gentlePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.loading-rings {
+  position: absolute;
+  inset: 0;
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-radius: 50%;
+}
+
+.ring-1 {
+  border-top-color: var(--color-primary);
+  opacity: 0.4;
+}
+
+.ring-2 {
+  inset: 10px;
+  border-right-color: var(--color-accent);
+  opacity: 0.3;
+}
+
+.ring-3 {
+  inset: 20px;
+  border-bottom-color: var(--color-success);
+  opacity: 0.2;
+}
+
+.loading-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.loading-query {
+  color: var(--color-primary);
+  font-style: italic;
+}
+
+.loading-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.loading-message {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  opacity: 0;
+  animation: fadeInMessage 0.5s ease forwards;
+}
+
+@keyframes fadeInMessage {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

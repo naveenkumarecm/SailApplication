@@ -1,0 +1,177 @@
+.hero {
+  position: relative;
+  padding: 5rem 2rem 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-bg-symbols {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Gandaberunda — clearly visible below content, not behind text */
+.gandaberunda-container {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gandaberunda-img {
+  width: 280px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.75;
+  border-radius: 24px;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 82%, transparent 100%),
+              linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 82%, transparent 100%),
+                      linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-composite: source-in;
+}
+
+/* Sticker style — visible, vibrant, slightly rotated for a casual feel */
+.sticker {
+  position: absolute;
+  opacity: 0.18;
+  filter: saturate(1.4);
+  transform: rotate(var(--rot, 0deg));
+}
+
+/* Travel & Journey */
+.st1  { top: 4%;  left: 2%;   font-size: 2.8rem; --rot: -8deg; }
+.st2  { top: 12%; right: 3%;  font-size: 2.2rem; --rot: 12deg; }
+.st3  { top: 30%; left: 4%;   font-size: 2.5rem; --rot: -5deg; }
+.st4  { bottom: 8%; right: 6%; font-size: 2.4rem; --rot: 10deg; }
+.st5  { bottom: 25%; left: 2%; font-size: 2rem; --rot: -12deg; }
+
+/* Monuments & Heritage */
+.st6  { top: 6%;  left: 20%;  font-size: 3rem; --rot: 5deg; }
+.st7  { top: 18%; right: 15%; font-size: 3.2rem; --rot: -6deg; }
+.st8  { bottom: 12%; left: 18%; font-size: 2.6rem; --rot: 8deg; }
+.st9  { top: 50%; right: 3%;  font-size: 2.4rem; --rot: -10deg; }
+.st10 { bottom: 35%; right: 12%; font-size: 2.3rem; --rot: 6deg; }
+
+/* Indian Heritage */
+.st11 { top: 3%;  right: 28%; font-size: 3rem; --rot: -4deg; }
+.st12 { top: 40%; left: 6%;   font-size: 2.6rem; --rot: 15deg; }
+.st13 { bottom: 5%; left: 30%; font-size: 2rem; --rot: -8deg; }
+.st14 { top: 65%; right: 8%;  font-size: 2.2rem; --rot: 5deg; }
+.st15 { bottom: 20%; right: 25%; font-size: 2.8rem; --rot: -12deg; }
+
+/* History & Culture */
+.st16 { top: 22%; left: 35%;  font-size: 2.4rem; --rot: 7deg; }
+.st17 { top: 8%;  left: 45%;  font-size: 2.6rem; --rot: -9deg; }
+.st18 { bottom: 30%; left: 8%; font-size: 2.2rem; --rot: 11deg; }
+.st19 { top: 55%; left: 3%;   font-size: 2.5rem; --rot: -6deg; }
+.st20 { bottom: 10%; right: 30%; font-size: 2.4rem; --rot: 8deg; }
+
+/* Nature & Sacred */
+.st21 { top: 35%; right: 20%; font-size: 2rem; --rot: -15deg; }
+.st22 { bottom: 40%; left: 25%; font-size: 2.8rem; --rot: 4deg; }
+.st23 { top: 70%; left: 15%;  font-size: 2.6rem; --rot: -7deg; }
+.st24 { top: 15%; left: 55%;  font-size: 2rem; --rot: 13deg; }
+.st25 { bottom: 15%; left: 45%; font-size: 2.8rem; --rot: -5deg; }
+
+/* More Travel */
+.st26 { top: 45%; left: 50%;  font-size: 2.2rem; --rot: 9deg; }
+.st27 { top: 5%;  right: 45%; font-size: 2.4rem; --rot: -11deg; }
+.st28 { bottom: 5%; right: 45%; font-size: 2.3rem; --rot: 6deg; }
+.st29 { top: 60%; right: 35%; font-size: 2rem; --rot: -8deg; }
+.st30 { bottom: 45%; right: 5%; font-size: 2.6rem; --rot: 12deg; }
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 50px;
+  padding: 0.4rem 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--color-success);
+}
+
+.badge-icon {
+  font-size: 1.1rem;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 3.8rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.title-accent {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  max-width: 550px;
+  margin: 0 auto 2rem;
+}
+
+.hero-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.feature-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.feature-chip:nth-child(1):hover { border-color: var(--color-primary); color: var(--color-primary); }
+.feature-chip:nth-child(2):hover { border-color: var(--color-accent2); color: var(--color-accent2); }
+.feature-chip:nth-child(3):hover { border-color: var(--color-accent); color: var(--color-accent); }
+.feature-chip:nth-child(4):hover { border-color: var(--color-accent3); color: var(--color-accent3); }
+.feature-chip:nth-child(5):hover { border-color: var(--color-success); color: var(--color-success); }
+.feature-chip:nth-child(6):hover { border-color: #a78bfa; color: #a78bfa; }
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem 2rem;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+  .sticker {
+    opacity: 0.12;
+  }
+  .gandaberunda-img {
+    width: 220px;
+  }
+}

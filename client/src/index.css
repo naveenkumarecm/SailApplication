@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #07070d;
+  --color-surface: #111120;
+  --color-surface-hover: #1a1a30;
+  --color-card: #161628;
+  --color-border: #2a2a45;
+  --color-primary: #8b5cf6;
+  --color-primary-glow: rgba(139, 92, 246, 0.3);
+  --color-accent: #f59e0b;
+  --color-accent2: #ec4899;
+  --color-accent3: #06b6d4;
+  --color-text: #f0eef8;
+  --color-text-muted: #a8a3be;
+  --color-text-dim: #6b6580;
+  --color-success: #10b981;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.6);
+  --gradient-primary: linear-gradient(135deg, #8b5cf6, #ec4899, #f59e0b);
+  --gradient-cool: linear-gradient(135deg, #06b6d4, #8b5cf6);
+  --gradient-warm: linear-gradient(135deg, #f59e0b, #ec4899);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 15% 30%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 20%, rgba(236, 72, 153, 0.08) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(245, 158, 11, 0.06) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '🏛  ⛩  🕌  🛕  🗿  🏰  🏺  📜  🪔  👑  ⚔  🐘  🦚  🪷  🧭  🎭  📿  🌺  🔱  🌸';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-3deg);
+  font-size: 3.5rem;
+  letter-spacing: 2rem;
+  word-spacing: 2.5rem;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
+  white-space: nowrap;
+  filter: saturate(1.5);
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-dim);
+}

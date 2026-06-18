@@ -1,0 +1,134 @@
+.books-section {
+  margin: 2.5rem 0;
+  padding: 2rem;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.books-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.books-icon {
+  font-size: 1.5rem;
+}
+
+.books-subtitle {
+  font-size: 0.78rem;
+  color: var(--color-text-dim);
+  margin-bottom: 1.5rem;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.book-card {
+  display: flex;
+  gap: 1rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.book-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  color: inherit;
+}
+
+.book-cover-container {
+  flex-shrink: 0;
+  width: 60px;
+  height: 85px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.book-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-cover-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, var(--color-surface), var(--color-bg));
+}
+
+.book-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.book-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-author {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.3rem;
+}
+
+.book-year {
+  font-size: 0.68rem;
+  color: var(--color-text-dim);
+  background: var(--color-surface);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+.book-subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+.book-subject {
+  font-size: 0.62rem;
+  color: var(--color-success);
+  background: rgba(78, 205, 196, 0.08);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+
+@media (max-width: 768px) {
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+  .books-section {
+    padding: 1.2rem;
+  }
+}
